@@ -1,0 +1,237 @@
+.modal{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  display: none; /* Flex */
+  transition: all ease .3s;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .modal-container{
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 25px rgba(153,153,153,.342);
+  padding: 50px;
+  gap: 30px;
+  border-radius: 5px;
+}
+
+.infos{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.infos .pizza-title{
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.infos .pizza-subtitle{
+  color: #AFAFAF;
+  letter-spacing: .5px;
+}
+
+.tamanhos{
+  width: max-content;
+}
+
+.tamanhos h2{
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 5px;
+  color: #C0C0C0;
+}
+
+.tamanhos-container{
+  display: flex;
+}
+
+.tamanhos-container div{
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  align-items: center;
+  background-color: #E5E5E5;
+  
+}
+
+.tamanhos-container .size{
+  cursor: pointer;
+}
+
+.tamanhos-container .size1{
+  border-radius: 8px 0 0 8px;
+}
+
+.tamanhos-container .size3{
+  border-radius: 0 8px 8px 0;
+}
+
+.tamanhos-container div.selected{
+  background-color: #399ADE;
+  color: #FFF;
+}
+
+.tamanhos-container span{
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 3px;
+}
+
+.preco-container h2{
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  color: #C0C0C0;
+}
+
+.preco-container .preco{
+  font-size: 26px;
+}
+
+.preco--container{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.preco-container .add-cart{
+  background-color: #E5E5E5;
+  display: flex;
+  gap: 20px;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.preco-container .add-cart button{
+  background-color: transparent;
+  border: none;
+}
+
+.preco-container .add-cart .aumentar-botao{
+  cursor: pointer;
+  padding: 0 7px;
+}
+
+.preco-container .add-cart .diminuir-botao{
+  position: relative;
+  top: -2px;
+  cursor: pointer;
+  padding: 0 7px;
+}
+
+.modal-container .opcoes-container{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.modal-container .opcoes-container button{
+  height: 45px;
+  font-size: 17px;
+  background-color: orange;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.modal-container .opcoes-container span{
+  cursor: pointer;
+}
+
+.pizza img{
+  max-width: 350px;
+}
+
+.modal-container .mobile{
+  display: none;
+}
+
+@media(max-width: 800px){
+  .modal{
+    display: none; /* flex */
+    background-color: #FFF;
+  }
+
+  .modal-container{
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+  }
+
+  .modal-container .mobile{
+    display: block;
+    color: orange;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+
+  .modal-container .opcoes-container button{
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .modal-container .opcoes-container .desktop{
+    display: none;
+  }
+
+}
+
+@media (max-width: 600px){
+  .pizza img{
+    max-width: 200px;
+  }
+  .modal .modal-container{
+    height: 100vh; /* linha adicionada para resolver o bug do clique fora do modal no mobile, sem essa linha o modal não estava ocupando toda a tela apesar de parecer (sobrava uma brechinha em cima e em baixo), remover em caso de algum bug */
+  }
+}
+
+@media (max-width: 400px){
+  .infos .pizza-title{
+    font-size: 20px;
+  }
+
+  .infos .pizza-subtitle{
+    font-size: 14px;
+  }
+
+  .tamanhos-container div{
+    font-size: 12px;
+  }
+
+  .tamanhos-container span{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px){
+  .pizza img{
+    max-width: 150px;
+  }
+
+  .infos .pizza-title{
+    font-size: 16px;
+  }
+
+  .infos .pizza-subtitle{
+    font-size: 12px;
+  }
+
+  .tamanhos-container div{
+    font-size: 10px;
+  }
+
+  .tamanhos-container span{
+    font-size: 8px;
+  }
+}

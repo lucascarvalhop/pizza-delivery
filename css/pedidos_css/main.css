@@ -1,0 +1,267 @@
+main{
+  flex: 1 0 auto;
+  background-color: #FAFAFA;
+}
+
+main .model{ /* modelo do carrinho */
+  display: none;
+}
+
+.content-container{
+  display: flex;
+  justify-content: center;
+  max-width: 1350px;
+  margin: 0 auto;
+  gap: 70px;
+  padding: 20px;
+}
+
+main.carrinho-ativo /* o conteudo irá ficar assim quando o carrinho for ativo (ao adicionar um item nele ou ao clique), adicionar a class "carrinho-ativo" ao content-container (agora main) para funcionar. */
+/* antes de colocar a tag main estava .content-container, retornar caso bugue tudo */
+{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  max-width: 1350px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+
+.pizzas-title{
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.pizzas-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pizzas-container .model{
+  display: none;
+}
+
+.pizza-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.082) 0px 5px 15px;
+}
+
+.pizza-container button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: -60px;
+  background-color: orange;
+  cursor: pointer;
+}
+
+.pizza-container .preco{
+  color: #838383;
+}
+
+.pizza-container .titulo{
+  font-size: 20px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.pizza-container .descricao{
+  text-align: center;
+  color: #838383;
+  font-size: 14px;
+}
+
+.carrinho{
+  display: none; /*block*/
+  box-shadow: rgba(0, 0, 0, 0.082) 0px 5px 15px;
+  height: max-content;
+  padding: 30px 0;
+}
+
+.carrinho-container{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.carrinho-container .infos-pizzas{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  /*padding: 10px 0;*/
+}
+
+.carrinho-container .add-cart{
+  background-color: #E5E5E5;
+  padding: 5px 15px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.carrinho-container .add-cart button{
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.carrinho-container .add-cart .cart-remover{
+  position: relative;
+  top: -2px;
+}
+
+.carrinho-container .subtotal, .carrinho-container .desconto, .carrinho-container .taxa-entrega{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #DDDDDD;
+  padding: 10px 0;
+  font-size: 14px
+}
+
+.carrinho-container .total{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid #DDDDDD;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.carrinho-container .finalizar-compra{
+  margin-top: 60px;
+  height: 45px;
+  font-size: 17px;
+  background-color: orange;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pizza-container img{
+  max-width: 300px;
+  cursor: pointer;
+}
+
+.carrinho img{
+  max-width: 60px;
+  display: inline;
+}
+
+.carrinho .mobile{
+  display: none;
+}
+
+@media(max-width: 1350px){
+  .pizza-container img{
+    max-width: 250px;
+    cursor: pointer;
+  }
+
+  .carrinho-container .add-cart{
+    background-color: #E5E5E5;
+    padding: 3px 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .carrinho img{
+    max-width: 50px;
+    display: inline;
+  }
+  
+}
+
+@media (max-width: 1200px){
+  main.carrinho-ativo{
+    grid-template-columns: 5fr 2fr;
+  }
+
+  .content-container{
+    grid-template-columns: 2fr 1fr;
+  }
+  
+  .pizzas-container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pizza-container img{
+    max-width: 230px;
+    cursor: pointer;
+  }
+
+  .pizza-name{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 950px){
+  main.carrinho-ativo{
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 850px){ /* Aqui o carrinho passa a ocupar a tela toda */
+  .carrinho .mobile{
+    display: block;
+    padding: 0 10px;
+    color: orange;;
+    cursor: pointer;
+  }
+
+  .carrinho{
+    display: none; /*flex */
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: #FFF;
+  }
+
+  .content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carrinho img{
+    max-width: 100px;
+    display: inline;
+  }
+
+  .pizza-name{
+    font-size: 22px;
+  }
+
+  .pizzas-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px){
+  .pizzas-container{
+    grid-template-columns: 1fr;
+  }
+
+  .pizzas-title{
+    font-size: 24px;
+  }
+}

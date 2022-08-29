@@ -1,0 +1,28 @@
+.modal-loading{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  display: flex;
+  transition: all ease .3s;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-loading .c-loader{
+  animation: isRotating 1s infinite;
+  width: 70px;
+  height: 70px;
+  border: 6px solid #e5e5e5;
+  border-top-color: orange;
+  border-radius: 50%;
+}
+
+@keyframes isRotating {
+  to{
+    transform: rotate(1turn);
+  }
+}

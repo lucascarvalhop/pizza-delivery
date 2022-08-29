@@ -1,0 +1,11 @@
+/* Presets */
+@import "./presets.css";
+
+/* Header */
+@import "./header.css";
+
+/* Main */
+@import "./main.css";
+
+/* Footer */
+@import "./footer.css";

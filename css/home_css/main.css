@@ -1,0 +1,143 @@
+main{
+  display: flex;
+  padding: 0 20px;
+}
+
+.content-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1350px;
+  margin: 0 auto 40px auto;
+}
+
+.content-texto{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.content-texto h1{
+  font-size: 50px;
+}
+
+.content-texto .m{
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+.content-texto .s{
+  color: #A9A9A9;
+  margin-top: 15px;
+}
+
+.content-texto .button a{
+  width: 250px;
+  height: 45px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 22px;
+  color: white;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.content-texto .button a:hover{
+  background-color: rgba(300, 140, 0, 1 );
+}
+
+.content-texto i{
+  margin-left: 15px;
+}
+
+.content-imagens{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content-imagens img{
+  max-width: 500px;
+}
+
+@media (max-width: 1200px){
+  .content-texto h1{
+    font-size: 40px;
+  }
+
+  .content-texto .m{
+    font-size: 25px;
+  }
+
+  .content-texto .s{
+    font-size: 14px;
+  }
+  .content-imagens img{
+    max-width: 400px;
+  }
+  
+}
+
+@media (max-width: 900px){
+  .content-texto h1{
+    font-size: 32px;
+  }
+
+  .content-texto .m{
+    font-size: 20px;
+  }
+
+  .content-texto .button a{
+    width: 195px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .content-imagens img{
+    max-width: 325px;
+  }
+}
+
+@media (max-width: 600px){
+  .content-container{
+    grid-template-columns: 1fr;
+    grid-template-areas: 'imagem'
+    'texto';
+    justify-content: center;
+  } 
+
+  .content-texto{
+    grid-area: texto;
+    justify-self: center
+  }
+
+  .content-imagens{
+    grid-area: imagem;
+    justify-self: center
+  }
+
+  .content-imagens img{
+    max-width: 220px;
+  }
+
+}
+
+@media (max-width: 350px){
+  .content-imagens img{
+    max-width: 200px;
+  }
+
+  .content-texto h1{
+    font-size: 26px;
+  }
+
+  .content-texto .m{
+    font-size: 18px;
+  }
+
+  .content-texto .s{
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/pedidos_css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="imgs/icon.png">
+  <title>Pedidos</title>
+</head>
+
+<body>
+  <header class="header-bg">
+    <div class="header-container">
+      <div class="img">
+        <a href="index.html"><img src="imgs/pizza-logo-vector-png633-removebg-preview.png" alt=""></a>
+      </div>
+      <nav>
+        <div class="btn-mobile">
+          <div class="button">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <div class="cart-button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-qt">0</span>
+          </div>
+        </div>
+        <ul class="header-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pedidos.html">Cardapio</a></li>
+          <li><a href="LINK DO PROJETO NO GITHUB">Sobre</a></li>
+          <li><a href="https://www.linkedin.com/in/lucaspcarvalho/">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="content-container">
+      <div class="pizzas">
+        <h1 class="pizzas-title">Monte seu pedido</h1>
+        <div class="pizzas-container">
+          <div class="model">
+            <div class="pizza-container">
+              <img src="" alt="" class="pizza-container-img">
+              <button>+</button>
+              <span class="preco"></span>
+              <span class="titulo"></span>
+              <span class="descricao"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carrinho">
+      <i class="fa-solid fa-arrow-left mobile"></i>
+      <div class="carrinho-container">
+        <div class="subtotal">
+          <span>Subtotal</span>
+          <span class="subtotal-preco">R$34,90</span>
+        </div>
+        <div class="desconto">
+          <span>Desconto (10%)</span>
+          <span class="desconto-preco"></span>
+        </div>
+        <div class="taxa-entrega">
+          <span>Taxa de entrega</span>
+          <span>R$4,00</span>
+        </div>
+        <div class="total">
+          <span>Total</span>
+          <span class="total-preco">R$31,41</span>
+        </div>
+        <button class="finalizar-compra">Finalizar Compra</button>
+      </div>
+    </div>
+    </div>
+    <div class="model">
+      <div class="infos-pizzas">
+        <img src="" alt="">
+        <span class="pizza-name"></span>
+        <div class="add-cart">
+          <button class="cart-adicionar">+</button>
+          <span class="cart-item-qt">1</span>
+          <button class="cart-remover">-</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="modal">
+    <div class="modal-container">
+      <i class="fa-solid fa-arrow-left mobile"></i>
+      <div class="pizza">
+        <img src="" alt="">
+      </div>
+      <div class="infos">
+        <div class="title">
+          <h1 class="pizza-title"></h1>
+          <span class="pizza-subtitle"></span>
+        </div>
+        <div class="tamanhos">
+          <h2>TAMANHO</h2>
+          <div class="tamanhos-container">
+            <div data-key="0" class="size size1">PEQUENA <span>155g</span></div>
+            <div data-key="1" class="size size2">MEDIA <span>430g</span></div>
+            <div data-key="2" class="size size3 selected">GRANDE <span>760g</span></div>
+          </div>
+        </div>
+        <div class="preco-container">
+          <h2>PREÇO</h2>
+          <div class="preco--container">
+            <span class="preco"></span>
+            <div class="add-cart">
+              <button class="diminuir-botao">-</button>
+              <span class="add-cart-qt">1</span>
+              <button class="aumentar-botao">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="opcoes-container">
+          <button class="add-cart-button">Adicionar ao carrinho</button>
+          <span class="desktop">Cancelar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-loading">
+    <div class="modal-container">
+      <div class="c-loader">
+
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Desenvolvido por <a href="https://www.linkedin.com/in/lucas-carvalho-2a6075218/">Lucas Carvalho</a></p>
+  </footer>
+  <script src="https://kit.fontawesome.com/d2bd54d844.js" crossorigin="anonymous"></script>
+  <script src="javascript/script.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+footer{
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 10px 0;
+}
+
+footer p{
+  font-size: 12px;
+}
