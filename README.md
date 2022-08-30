@@ -7,7 +7,7 @@ https://lucascarvalhop.github.io/pizza-delivery/index.html
 Pizza delivery é um delivery de pizzas web, funcional tanto no desktop quanto no mobile. <br>
 O projeto conta com três telas, sendo elas uma tela inicial, uma tela de cardápio onde o usuário realiza seu pedido e uma tela de agradecimento
 que surje após um pedido ser realizado.
-Na parte de pedidos, é possível escolher uma pizza de acordo com o tamanho e preço, ao adicionar ao carrinho o delivery calcula automaticamente o preço das pizzas
+Na parte de pedidos é possível escolher uma pizza de acordo com o tamanho e preço, ao adicionar ao carrinho o delivery calcula automaticamente o preço das pizzas
 que estão sendo adicionadas.
 Todas as pizzas estão sendo adicionadas no html via JavaScript por um arquivo separado, o que facilita futuras manutenções como troca de pizzas, mudanças de preços e etc...
 
